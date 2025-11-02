@@ -9,7 +9,7 @@ The challenge involves systematically examining a virtual machine to identify vu
 
 
 ### Phase 1: Network Discovery
-The first step involves identifying the target system on the network. Using network scanning tools, we determined the target machine's IP address was 192.168.43.219. Port scanning revealed that port 80 (web services) was accessible.
+The first step involves identifying the target system on the network. Using network scanning tools, we determined the target machine's IP address was 10.0.0.36. Port scanning revealed that port 80 (web services) was accessible.
 
 
 ### Phase 2: Information Gathering
