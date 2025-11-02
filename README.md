@@ -5,17 +5,24 @@ This project provides a detailed breakdown of the Dina virtual machine security 
 ## Difficulty Level: Beginner-friendly
 Overview of the Process
 
-The challenge involves systematically examining a virtual machine to identify vulnerabilities and ultimately gain administrative access. This follows standard security testing methodology used by professionals to assess system security.
+The challenge involves systematically analyzing a virtual machine to identify vulnerabilities and, ultimately, gain administrative access. This follows standard security testing methodology used by professionals to assess system security.
 
 
 ### Phase 1: Network Discovery
-The first step involves identifying the target system on the network. Using network scanning tools, we determined the target machine's IP address was 10.0.0.36. Port scanning revealed that port 80 (web services) was accessible.
+The first step is to identify the target system on the network. Using network scanning tools, we determined that the target machine's IP address was 10.0.0.36. Port scanning revealed that port 80 (web services) was accessible.
+
+<img width="845" height="528" alt="Network Discovery" src="https://github.com/user-attachments/assets/fbc486dd-246e-4446-9b7f-2decfb6ccea9" />
+
+<img width="843" height="399" alt="Network Discovery 2" src="https://github.com/user-attachments/assets/cdaae857-0961-416c-a024-4167127bd3da" />
 
 
 ### Phase 2: Information Gathering
 With port 80 open, we examined the web server. The initial homepage didn't reveal much, but further investigation showed a robots.txt file containing several directory paths.
 Exploring these directories led us to one called "/nothing" which contained hidden information in its source code - specifically, a list of potential passwords.
 To find additional directories, we performed a comprehensive directory scan and discovered a "/secure" folder containing a file named backup.zip.
+
+<img width="962" height="760" alt="Information Gathering" src="https://github.com/user-attachments/assets/df1e5f11-bbc8-4432-ae7e-37ad05963bb1" />
+
 
 
 ### Phase 3: Accessing Protected Files
