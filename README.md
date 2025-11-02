@@ -15,7 +15,6 @@ The first step is to identify the target system on the network. Using network sc
 
 <img width="843" height="399" alt="Network Discovery 2" src="https://github.com/user-attachments/assets/cdaae857-0961-416c-a024-4167127bd3da" />
 
-<img width="954" height="462" alt="Information Gathering 2" src="https://github.com/user-attachments/assets/8b77cc7b-f82e-4465-a64f-fef4263e1ea9" />
 
 ### Phase 2: Information Gathering
 With port 80 open, we examined the web server. The initial homepage didn't reveal much, but further investigation showed a robots.txt file containing several directory paths.
