@@ -2,8 +2,9 @@
 This project provides a detailed breakdown of the Dina virtual machine security challenge. This is an educational exercise created by Touhid Shaikh designed for beginners learning cybersecurity concepts.
 
 
-## Difficulty Level: Beginner-friendly
-Overview of the Process
+#### Difficulty Level: Beginner-friendly
+
+### Overview of the Process
 
 The challenge involves systematically analyzing a virtual machine to identify vulnerabilities and, ultimately, gain administrative access. This follows standard security testing methodology used by professionals to assess system security.
 
