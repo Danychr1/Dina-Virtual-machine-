@@ -15,15 +15,20 @@ The first step is to identify the target system on the network. Using network sc
 
 <img width="843" height="399" alt="Network Discovery 2" src="https://github.com/user-attachments/assets/cdaae857-0961-416c-a024-4167127bd3da" />
 
+<img width="954" height="462" alt="Information Gathering 2" src="https://github.com/user-attachments/assets/8b77cc7b-f82e-4465-a64f-fef4263e1ea9" />
 
 ### Phase 2: Information Gathering
 With port 80 open, we examined the web server. The initial homepage didn't reveal much, but further investigation showed a robots.txt file containing several directory paths.
 Exploring these directories led us to one called "/nothing" which contained hidden information in its source code - specifically, a list of potential passwords.
 To find additional directories, we performed a comprehensive directory scan and discovered a "/secure" folder containing a file named backup.zip.
 
-<img width="962" height="760" alt="Information Gathering" src="https://github.com/user-attachments/assets/df1e5f11-bbc8-4432-ae7e-37ad05963bb1" />
+<img width="962" height="760" alt="Information Gathering" src="https://github.com/user-attachments/assets/df1e5f11-bbc8-4432-ae7e-37ad05963bb1" /> 
 
+<img width="961" height="246" alt="Information Garthering 4" src="https://github.com/user-attachments/assets/c65c6184-d124-4318-a338-5283f5c6b339" />
 
+<img width="965" height="262" alt="Information Gathering 3 " src="https://github.com/user-attachments/assets/c4d2d1f7-adfb-4f6a-b6b4-f472f4cf6787" />
+
+<img width="954" height="462" alt="Information Gathering 2" src="https://github.com/user-attachments/assets/4386e69c-245d-4065-bdea-0d08404a40a2" />
 
 ### Phase 3: Accessing Protected Files
 The backup.zip file required a password. By testing the previously discovered passwords, we found that "freedom" successfully extracted the contents.
