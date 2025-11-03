@@ -42,23 +42,25 @@ Inside was an audio file (backup-cred.mp3) that, upon closer inspection, turned 
 * A hidden directory path: /SecreTgatwayLogin
 <img width="961" height="536" alt="Accessing 3 " src="https://github.com/user-attachments/assets/5198d9fb-1460-4465-b481-0a903d1e8a1b" />
 
-<img width="960" height="352" alt="Accessing 4" src="https://github.com/user-attachments/assets/5d0a2df2-05bc-4ddf-aef9-db082e4bfadd" />
-
 
 ### Phase 4: Gaining Initial Access
 Navigating to the hidden directory revealed a playSMS login interface. Using the username "touhid" and testing various passwords from our earlier list, we successfully authenticated with the password "diana".
 We then researched known vulnerabilities in the playSMS application and found an exploit that allows file upload through CSV functionality. After configuring the exploit parameters with our gathered credentials, we established a remote connection to the system.
-
-<img width="961" height="536" alt="Accessing 3 " src="https://github.com/user-attachments/assets/5198d9fb-1460-4465-b481-0a903d1e8a1b" />
 
 <img width="960" height="352" alt="Accessing 4" src="https://github.com/user-attachments/assets/5d0a2df2-05bc-4ddf-aef9-db082e4bfadd" />
 
 
 ### Phase 5: Expanding Access
 Once connected with limited privileges (www-data user), we examined what permissions this account had. We discovered this user could execute Perl scripts with elevated privileges.
+<img width="662" height="548" alt="Expanding " src="https://github.com/user-attachments/assets/bd1003bb-bb51-48e6-8924-a6d43436b6f7" />
+
+<img width="1014" height="273" alt="Expanding 1" src="https://github.com/user-attachments/assets/4db62ec6-dc43-4d07-883a-ab37d051d937" />
 
 ### Phase 6: Achieving Full Control
-Leveraging the Perl execution permissions, we used a command to spawn a privileged shell, giving us administrative access. We then navigated to the restricted root directory and successfully retrieved the completion flag from flag.txt.
+Leveraging permissive Perl execution to escalate privileges and obtain an administrative shell. Using Nikto for a quick web vulnerability check helped confirm the attack surface, and once privileged we accessed the restricted root directory and retrieved the completion flag from flag.txt.
+ * Hyphen H is what defines Nikto, that this is gonna be my target host.
+  
+<img width="1032" height="500" alt="Expanding 2" src="https://github.com/user-attachments/assets/8f22109a-777c-4b85-b9b5-e4236135e5c6" />
 
 
 ### Key Learning Points
