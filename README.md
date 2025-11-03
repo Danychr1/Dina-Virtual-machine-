@@ -49,6 +49,10 @@ Inside was an audio file (backup-cred.mp3) that, upon closer inspection, turned 
 Navigating to the hidden directory revealed a playSMS login interface. Using the username "touhid" and testing various passwords from our earlier list, we successfully authenticated with the password "diana".
 We then researched known vulnerabilities in the playSMS application and found an exploit that allows file upload through CSV functionality. After configuring the exploit parameters with our gathered credentials, we established a remote connection to the system.
 
+<img width="961" height="536" alt="Accessing 3 " src="https://github.com/user-attachments/assets/5198d9fb-1460-4465-b481-0a903d1e8a1b" />
+
+<img width="960" height="352" alt="Accessing 4" src="https://github.com/user-attachments/assets/5d0a2df2-05bc-4ddf-aef9-db082e4bfadd" />
+
 
 ### Phase 5: Expanding Access
 Once connected with limited privileges (www-data user), we examined what permissions this account had. We discovered this user could execute Perl scripts with elevated privileges.
