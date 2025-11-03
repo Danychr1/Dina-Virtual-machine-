@@ -12,30 +12,38 @@ The challenge involves systematically analyzing a virtual machine to identify vu
 ### Phase 1: Network Discovery
 The first step is to identify the target system on the network. Using network scanning tools, we determined that the target machine's IP address was 10.0.0.36. Port scanning revealed that port 80 (web services) was accessible.
 
-<img width="845" height="528" alt="Network Discovery" src="https://github.com/user-attachments/assets/fbc486dd-246e-4446-9b7f-2decfb6ccea9" />
+<img width="844" height="452" alt="N-D" src="https://github.com/user-attachments/assets/2c1bfc79-1431-4a94-8065-74d9d9413890" />
 
-<img width="843" height="399" alt="Network Discovery 2" src="https://github.com/user-attachments/assets/cdaae857-0961-416c-a024-4167127bd3da" />
+<img width="841" height="540" alt="N-D2 " src="https://github.com/user-attachments/assets/936479f6-63da-4ad5-b8e8-10bfadf0bd22" />
 
+<img width="995" height="729" alt="N-D3" src="https://github.com/user-attachments/assets/d78691e4-b484-4978-b7eb-583f91e02228" />
+ 
 
 ### Phase 2: Information Gathering
 With port 80 open, we examined the web server. The initial homepage didn't reveal much, but further investigation showed a robots.txt file containing several directory paths.
-Exploring these directories led us to one called "/nothing" which contained hidden information in its source code - specifically, a list of potential passwords.
-To find additional directories, we performed a comprehensive directory scan and discovered a "/secure" folder containing a file named backup.zip.
+Exploring these directories led us to one called "/nothing" which contained hidden information in its source code, specifically, a list of potential passwords.
+To find additional directories, we conducted a comprehensive directory scan and discovered a "/secure" folder containing a file named "backup.zip".
 
 <img width="962" height="760" alt="Information Gathering" src="https://github.com/user-attachments/assets/df1e5f11-bbc8-4432-ae7e-37ad05963bb1" /> 
 
-<img width="961" height="246" alt="Information Garthering 4" src="https://github.com/user-attachments/assets/c65c6184-d124-4318-a338-5283f5c6b339" />
-
-<img width="965" height="262" alt="Information Gathering 3 " src="https://github.com/user-attachments/assets/c4d2d1f7-adfb-4f6a-b6b4-f472f4cf6787" />
+<img width="961" height="246" alt="Information Garthering 3" src="https://github.com/user-attachments/assets/546b7e98-0445-4d2f-bd51-30b22d5170d5" />
 
 <img width="954" height="462" alt="Information Gathering 2" src="https://github.com/user-attachments/assets/4386e69c-245d-4065-bdea-0d08404a40a2" />
 
 ### Phase 3: Accessing Protected Files
 The backup.zip file required a password. By testing the previously discovered passwords, we found that "freedom" successfully extracted the contents.
-Inside was an audio file (backup-cred.mp3) that, upon closer examination, was actually a text file in disguise. This file contained:
+Inside was an audio file (backup-cred.mp3) that, upon closer inspection, turned out to be a text file in disguise. This file contained:
+
+<img width="1080" height="837" alt="Accessing " src="https://github.com/user-attachments/assets/25e37127-506f-4330-9ece-473cb0ecb567" />
+
+<img width="995" height="368" alt="Accessing 2" src="https://github.com/user-attachments/assets/c6c3d6d9-bdbc-4f7e-a8ba-0ab404b4c0c4" />
 
 * A username: touhid
 * A hidden directory path: /SecreTgatwayLogin
+<img width="961" height="536" alt="Accessing 3 " src="https://github.com/user-attachments/assets/5198d9fb-1460-4465-b481-0a903d1e8a1b" />
+
+<img width="960" height="352" alt="Accessing 4" src="https://github.com/user-attachments/assets/5d0a2df2-05bc-4ddf-aef9-db082e4bfadd" />
+
 
 ### Phase 4: Gaining Initial Access
 Navigating to the hidden directory revealed a playSMS login interface. Using the username "touhid" and testing various passwords from our earlier list, we successfully authenticated with the password "diana".
