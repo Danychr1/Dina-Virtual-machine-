@@ -65,10 +65,13 @@ We then researched known vulnerabilities in the playSMS application and found an
 ### Phase 5: Expanding Access
 Once connected with limited privileges (www-data user), we examined what permissions this account had. We discovered this user could execute Perl scripts with elevated privileges.
 
+* 
 
 
+* 
 
-Leveraging permissive Perl execution to escalate privileges and obtain an administrative shell. Using Nikto for a quick web vulnerability check helped confirm the attack surface. 
+- Leveraging permissive Perl execution to escalate privileges and obtain an administrative shell. Using Nikto for a quick web vulnerability check helped confirm the attack surface.
+   
  * Hyphen H is what defines Nikto. This is gonna be my target host.
   
 <img width="1032" height="500" alt="Expanding 2" src="https://github.com/user-attachments/assets/8f22109a-777c-4b85-b9b5-e4236135e5c6" />
