@@ -53,16 +53,23 @@ We then researched known vulnerabilities in the playSMS application and found an
 
 <img width="1014" height="273" alt="Expanding 1" src="https://github.com/user-attachments/assets/4db62ec6-dc43-4d07-883a-ab37d051d937" />
 
+<img width="1032" height="616" alt="GIN" src="https://github.com/user-attachments/assets/accd60ef-dabe-463b-b38e-b3bdbe8310a9" />
+
+<img width="1037" height="480" alt="GIN1" src="https://github.com/user-attachments/assets/202ae903-3a2d-4316-bba7-9ee2a8ba0b32" />
+
+<img width="1041" height="506" alt="GIN2" src="https://github.com/user-attachments/assets/04041fd3-e884-4ab8-8b64-d85473157ea9" />
+
+<img width="1037" height="228" alt="GIN3" src="https://github.com/user-attachments/assets/f84277d1-7986-4ef7-b9dd-83b9a344484d" />
+
+
 ### Phase 5: Expanding Access
 Once connected with limited privileges (www-data user), we examined what permissions this account had. We discovered this user could execute Perl scripts with elevated privileges.
 
 
 
-<img width="1014" height="273" alt="Expanding 1" src="https://github.com/user-attachments/assets/4db62ec6-dc43-4d07-883a-ab37d051d937" />
-
 
 Leveraging permissive Perl execution to escalate privileges and obtain an administrative shell. Using Nikto for a quick web vulnerability check helped confirm the attack surface. 
- * Hyphen H is what defines Nikto, that this is gonna be my target host.
+ * Hyphen H is what defines Nikto. This is gonna be my target host.
   
 <img width="1032" height="500" alt="Expanding 2" src="https://github.com/user-attachments/assets/8f22109a-777c-4b85-b9b5-e4236135e5c6" />
 
