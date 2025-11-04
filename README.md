@@ -43,18 +43,20 @@ Inside was an audio file (backup-cred.mp3) that, upon closer inspection, turned 
 * A hidden directory path: /SecreTgatwayLogin
 <img width="961" height="536" alt="Accessing 3 " src="https://github.com/user-attachments/assets/5198d9fb-1460-4465-b481-0a903d1e8a1b" />
 
+<img width="960" height="352" alt="Accessing 4" src="https://github.com/user-attachments/assets/5d0a2df2-05bc-4ddf-aef9-db082e4bfadd" />
 
 ### Phase 4: Gaining Initial Access
 Navigating to the hidden directory revealed a playSMS login interface. Using the username "touhid" and testing various passwords from our earlier list, we successfully authenticated with the password "diana".
 We then researched known vulnerabilities in the playSMS application and found an exploit that allows file upload through CSV functionality. After configuring the exploit parameters with our gathered credentials, we established a remote connection to the system.
 
-<img width="960" height="352" alt="Accessing 4" src="https://github.com/user-attachments/assets/5d0a2df2-05bc-4ddf-aef9-db082e4bfadd" />
+<img width="459" height="479" alt="Expanding 1 " src="https://github.com/user-attachments/assets/002f811f-e46c-459e-906b-8b6d36bcd17d" />
 
+<img width="1014" height="273" alt="Expanding 1" src="https://github.com/user-attachments/assets/4db62ec6-dc43-4d07-883a-ab37d051d937" />
 
 ### Phase 5: Expanding Access
 Once connected with limited privileges (www-data user), we examined what permissions this account had. We discovered this user could execute Perl scripts with elevated privileges.
 
-<img width="662" height="548" alt="Expanding " src="https://github.com/user-attachments/assets/bd1003bb-bb51-48e6-8924-a6d43436b6f7" />
+
 
 <img width="1014" height="273" alt="Expanding 1" src="https://github.com/user-attachments/assets/4db62ec6-dc43-4d07-883a-ab37d051d937" />
 
