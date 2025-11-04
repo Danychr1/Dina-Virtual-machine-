@@ -15,8 +15,6 @@ The first step is to identify the target system on the network. Using network sc
 <img width="844" height="452" alt="N-D" src="https://github.com/user-attachments/assets/2c1bfc79-1431-4a94-8065-74d9d9413890" />
 
 <img width="841" height="540" alt="N-D2 " src="https://github.com/user-attachments/assets/936479f6-63da-4ad5-b8e8-10bfadf0bd22" />
-
-<img width="995" height="729" alt="N-D3" src="https://github.com/user-attachments/assets/d78691e4-b484-4978-b7eb-583f91e02228" />
  
 
 ### Phase 2: Information Gathering
@@ -29,6 +27,9 @@ To find additional directories, we conducted a comprehensive directory scan and 
 <img width="961" height="246" alt="Information Garthering 3" src="https://github.com/user-attachments/assets/546b7e98-0445-4d2f-bd51-30b22d5170d5" />
 
 <img width="954" height="462" alt="Information Gathering 2" src="https://github.com/user-attachments/assets/4386e69c-245d-4065-bdea-0d08404a40a2" />
+
+<img width="995" height="729" alt="N-D3" src="https://github.com/user-attachments/assets/d78691e4-b484-4978-b7eb-583f91e02228" />
+ 
 
 ### Phase 3: Accessing Protected Files
 The backup.zip file required a password. By testing the previously discovered passwords, we found that "freedom" successfully extracted the contents.
@@ -52,15 +53,19 @@ We then researched known vulnerabilities in the playSMS application and found an
 
 ### Phase 5: Expanding Access
 Once connected with limited privileges (www-data user), we examined what permissions this account had. We discovered this user could execute Perl scripts with elevated privileges.
+
 <img width="662" height="548" alt="Expanding " src="https://github.com/user-attachments/assets/bd1003bb-bb51-48e6-8924-a6d43436b6f7" />
 
 <img width="1014" height="273" alt="Expanding 1" src="https://github.com/user-attachments/assets/4db62ec6-dc43-4d07-883a-ab37d051d937" />
 
-### Phase 6: Achieving Full Control
-Leveraging permissive Perl execution to escalate privileges and obtain an administrative shell. Using Nikto for a quick web vulnerability check helped confirm the attack surface, and once privileged we accessed the restricted root directory and retrieved the completion flag from flag.txt.
+
+Leveraging permissive Perl execution to escalate privileges and obtain an administrative shell. Using Nikto for a quick web vulnerability check helped confirm the attack surface. 
  * Hyphen H is what defines Nikto, that this is gonna be my target host.
   
 <img width="1032" height="500" alt="Expanding 2" src="https://github.com/user-attachments/assets/8f22109a-777c-4b85-b9b5-e4236135e5c6" />
+
+### Phase 6: Achieving Full Control
+Leveraging the Perl execution permissions, we used a command to spawn a privileged shell, giving us administrative access. We then navigated to the restricted root directory and successfully retrieved the completion flag from flag.txt.
 
 
 ### Key Learning Points
