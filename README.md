@@ -22,11 +22,6 @@ With port 80 open, we examined the web server. The initial homepage didn't revea
 Exploring these directories led us to one called "/nothing" which contained hidden information in its source code, specifically, a list of potential passwords.
 To find additional directories, we conducted a comprehensive directory scan and discovered a "/secure" folder containing a file named "backup.zip".
 
-* Hyphen H is what defines Nikto. This is gonna be my target host.
-  
-<img width="1032" height="500" alt="Expanding 2" src="https://github.com/user-attachments/assets/8f22109a-777c-4b85-b9b5-e4236135e5c6" />
-
-
 
 <img width="962" height="760" alt="Information Gathering" src="https://github.com/user-attachments/assets/df1e5f11-bbc8-4432-ae7e-37ad05963bb1" /> 
 
@@ -69,15 +64,15 @@ We then researched known vulnerabilities in the playSMS application and found an
 
 
 ### Phase 5: Expanding Access
+
 Once connected with limited privileges (www-data user), we examined what permissions this account had. We discovered this user could execute Perl scripts with elevated privileges.
 
-* 
-
-
-* 
 
 - Leveraging permissive Perl execution to escalate privileges and obtain an administrative shell. Using Nikto for a quick web vulnerability check helped confirm the attack surface.
-   
+  
+   * Hyphen H is what defines Nikto. This is gonna be my target host.
+  
+<img width="1032" height="500" alt="Expanding 2" src="https://github.com/user-attachments/assets/8f22109a-777c-4b85-b9b5-e4236135e5c6" />
 
 ### Phase 6: Achieving Full Control
 Leveraging the Perl execution permissions, we used a command to spawn a privileged shell, giving us administrative access. We then navigated to the restricted root directory and successfully retrieved the completion flag from flag.txt.
@@ -88,7 +83,7 @@ This exercise demonstrates several important security concepts:
 
   * How exposed directories can leak sensitive information
   * The importance of protecting backup files
-  * Why default or weak credentials create vulnerabilities
+  * Why do default or weak credentials create vulnerabilities
   * How seemingly minor permissions can be exploited
   * The value of systematic enumeration in security testing
 
