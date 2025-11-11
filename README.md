@@ -84,6 +84,73 @@ By leveraging Perl's execution permissions, we used a command to spawn a privile
 
 
 ### Key Learning Points
+
+| Phase | Discovery | Credentials/Info |
+|-------|-----------|------------------|
+| Recon | Target IP | 10.0.0.36 |
+| Web Enum | Password List | Multiple passwords including "freedom" and "diana" |
+| File Access | ZIP Password | freedom |
+| Credentials | Username | touhid |
+| Credentials | Password | diana |
+| Credentials | Hidden Path | /SecreTgatwayLogin |
+| PrivEsc | Sudo Rights | www-data can run perl as root |
+```
+
+## **Option 2: Plain Text (Easy to copy)**
+```
+SUMMARY OF KEY FINDINGS
+=======================
+
+Phase: Recon
+  Discovery: Target IP
+  Info: 10.0.0.36
+
+Phase: Web Enumeration
+  Discovery: Password List
+  Info: Multiple passwords including "freedom" and "diana"
+
+Phase: File Access
+  Discovery: ZIP Password
+  Info: freedom
+
+Phase: Credentials Discovery
+  Discovery: Username
+  Info: touhid
+
+Phase: Credentials Discovery
+  Discovery: Password
+  Info: diana
+
+Phase: Credentials Discovery
+  Discovery: Hidden Path
+  Info: /SecreTgatwayLogin
+
+Phase: Privilege Escalation
+  Discovery: Sudo Rights
+  Info: www-data can run perl as root
+```
+
+## **Option 3: Bullet List Format**
+```
+SUMMARY OF KEY FINDINGS
+
+- Recon Phase
+  - Target IP: 10.0.0.36
+
+- Web Enumeration
+  - Password List: Multiple passwords including "freedom" and "diana"
+
+- File Access
+  - ZIP Password: freedom
+
+- Credentials Found
+  - Username: touhid
+  - Password: diana
+  - Hidden Path: /SecreTgatwayLogin
+
+- Privilege Escalation
+  - Sudo Rights: www-data can run perl as root
+
 This exercise demonstrates several important security concepts:
 
   * How exposed directories can leak sensitive information
