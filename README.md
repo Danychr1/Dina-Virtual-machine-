@@ -83,7 +83,7 @@ By leveraging Perl's execution permissions, we used a command to spawn a privile
 <img width="940" height="308" alt="Archieving " src="https://github.com/user-attachments/assets/5600ce0a-d2d7-4f8f-96a3-ee053881b60a" />
 
 
-### Key Learning Points
+### Summary of Key Finding
 
 | Phase | Discovery | Credentials/Info |
 |-------|-----------|------------------|
@@ -94,69 +94,17 @@ By leveraging Perl's execution permissions, we used a command to spawn a privile
 | Credentials | Password | diana |
 | Credentials | Hidden Path | /SecreTgatwayLogin |
 | PrivEsc | Sudo Rights | www-data can run perl as root |
-```
 
-## **Option 2: Plain Text (Easy to copy)**
-```
-SUMMARY OF KEY FINDINGS
-=======================
+Learning Points
 
-Phase: Recon
-  Discovery: Target IP
-  Info: 10.0.0.36
+ 1. Information Disclosure: Always check robots.txt and source code.
+   
+ 3. Password Reuse: Credentials found in one place often work elsewhere
 
-Phase: Web Enumeration
-  Discovery: Password List
-  Info: Multiple passwords including "freedom" and "diana"
+ 5. File Type Verification: Don't trust file extensions - verify with file command
 
-Phase: File Access
-  Discovery: ZIP Password
-  Info: freedom
-
-Phase: Credentials Discovery
-  Discovery: Username
-  Info: touhid
-
-Phase: Credentials Discovery
-  Discovery: Password
-  Info: diana
-
-Phase: Credentials Discovery
-  Discovery: Hidden Path
-  Info: /SecreTgatwayLogin
-
-Phase: Privilege Escalation
-  Discovery: Sudo Rights
-  Info: www-data can run perl as root
-```
-
-## **Option 3: Bullet List Format**
-```
-SUMMARY OF KEY FINDINGS
-
-- Recon Phase
-  - Target IP: 10.0.0.36
-
-- Web Enumeration
-  - Password List: Multiple passwords including "freedom" and "diana"
-
-- File Access
-  - ZIP Password: freedom
-
-- Credentials Found
-  - Username: touhid
-  - Password: diana
-  - Hidden Path: /SecreTgatwayLogin
-
-- Privilege Escalation
-  - Sudo Rights: www-data can run perl as root
-
-This exercise demonstrates several important security concepts:
-
-  * How exposed directories can leak sensitive information
-  * The importance of protecting backup files
-  * Why do default or weak credentials create vulnerabilities
-  * How seemingly minor permissions can be exploited
-  * The value of systematic enumeration in security testing
+ 7. Sudo Misconfiguration: Allowing scripting languages with sudo is dangerous
+    
+ 9. Application Vulnerabilities: Known CVEs in web applications are common entry points
 
 This type of controlled environment helps security professionals develop skills for identifying and addressing real-world vulnerabilities.
