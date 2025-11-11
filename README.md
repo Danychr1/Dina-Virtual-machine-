@@ -65,8 +65,9 @@ We then researched known vulnerabilities in the playSMS application and found an
 
 ### Phase 5: Expanding Access
 
-Once connected with limited privileges (www-data user), we examined what permissions this account had. We discovered this user could execute Perl scripts with elevated privileges.
+Once connected with limited privileges (as the www-data user), we examined the permissions this account had. We discovered this user could execute Perl scripts with elevated privileges.
 
+ <img width="1037" height="228" alt="GIN3" src="https://github.com/user-attachments/assets/f84277d1-7986-4ef7-b9dd-83b9a344484d" />
 
 - Leveraging permissive Perl execution to escalate privileges and obtain an administrative shell. Using Nikto for a quick web vulnerability check helped confirm the attack surface.
   
@@ -75,7 +76,11 @@ Once connected with limited privileges (www-data user), we examined what permiss
 <img width="1032" height="500" alt="Expanding 2" src="https://github.com/user-attachments/assets/8f22109a-777c-4b85-b9b5-e4236135e5c6" />
 
 ### Phase 6: Achieving Full Control
-Leveraging the Perl execution permissions, we used a command to spawn a privileged shell, giving us administrative access. We then navigated to the restricted root directory and successfully retrieved the completion flag from flag.txt.
+By leveraging Perl's execution permissions, we used a command to spawn a privileged shell, granting us administrative access. We then navigated to the restricted root directory and successfully retrieved the completion flag from flag.txt.
+
+<img width="935" height="301" alt="Archieving 1" src="https://github.com/user-attachments/assets/63516f79-aeea-4c3e-9493-920622ab206a" />
+
+<img width="940" height="308" alt="Archieving " src="https://github.com/user-attachments/assets/5600ce0a-d2d7-4f8f-96a3-ee053881b60a" />
 
 
 ### Key Learning Points
